@@ -9,6 +9,8 @@ public class PlayerMove : MonoBehaviour
     Rigidbody playerRB; //Bit of the player that's moved
     private Animator catAnimator; //Telling the animator to do it's job
     public GameObject character;
+    Vector3 lastPosition = Vector3.zero; // for tracking Cat Speed
+    float speed = 0f;
 
 
     void Start() //Calling the components
@@ -17,32 +19,57 @@ public class PlayerMove : MonoBehaviour
         playerRB = GetComponent<Rigidbody>();
     }
 
-    void Update () {
+    void Update () 
+    {
+        CatMove();
+        FlipCat();
+	}
+
+    void CatMove()
+    {
 		
-		if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
 			transform.position += Vector3.right * playerSpeed * Time.deltaTime;
-            catAnimator.SetBool("IsWalking", true);
 		}
 		if (Input.GetKey(KeyCode.LeftArrow))
         {
 			transform.position += Vector3.left* playerSpeed * Time.deltaTime;
-            catAnimator.SetBool("IsWalking", true);
 		}
 		if (Input.GetKey(KeyCode.UpArrow))
         {
 			transform.position += Vector3.forward * playerSpeed * Time.deltaTime;
-            catAnimator.SetBool("IsWalking", true);
 		}
 		if (Input.GetKey(KeyCode.DownArrow))
         {
 			transform.position += Vector3.back* playerSpeed * Time.deltaTime;
-            catAnimator.SetBool("IsWalking", true);
 		}
-        else
-        catAnimator.SetBool("IsWalking", false);
-        {
 
+
+    }
+
+    void FixedUpdate() 
+    {
+        speed = (transform.position - lastPosition).magnitude;
+        lastPosition = transform.position;
+                
+        if(speed > 0)
+        {
+            catAnimator.SetBool("IsWalking", true);
         }
-	}
+        else
+        {
+            catAnimator.SetBool("IsWalking", false);
+        }
+    }
+
+    void FlipCat()
+    {
+       // bool catHasHorizontalSpeed = Mathf.Abs(playerRB.velocity.x) > Mathf.Epsilon;
+       // if (catHasHorizontalSpeed)
+       // {
+        transform.localScale = new Vector3 (Mathf.Sign(playerRB.velocity.x), 1f);
+       // Debug.Log ("Sprite Flipped");
+       // }
+    }
 }
