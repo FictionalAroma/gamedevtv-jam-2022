@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class CatInteraction : MonoBehaviour
 {
+    string triggeredName;
 
-    void OnCollisionEnter(Collision other) 
+    private void OnTriggerEnter(Collider other) 
     {
-        Debug.Log(other);
+        triggeredName = other.GetComponent<InteractablesScripts>().GetName();
+        Debug.Log(triggeredName);
     }
+    
 
 }
