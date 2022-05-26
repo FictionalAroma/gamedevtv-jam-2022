@@ -52,15 +52,8 @@ public class PlayerMove : MonoBehaviour
     {
         speed = (transform.position - lastPosition).magnitude;
         lastPosition = transform.position;
-                
-        if(speed > 0)
-        {
-            catAnimator.SetBool("IsWalking", true);
-        }
-        else
-        {
-            catAnimator.SetBool("IsWalking", false);
-        }
+
+        catAnimator.SetBool("IsWalking", speed > 0);
     }
 
     void FlipCat()
