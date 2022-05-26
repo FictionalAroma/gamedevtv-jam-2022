@@ -18,7 +18,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartGameClick()
     {
-        LevelLoader.LoadStartScreen();
+        LevelLoader.GoToMainGame();
     }
 
     public void ExitGame()

@@ -14,7 +14,7 @@ public class LevelLoader : MonoBehaviour
 
     public static void GoToMainGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MainGame");
     }
 
     private void Start()
