@@ -8,8 +8,11 @@ public class CatInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) 
     {
+        if(other.GetComponent<InteractablesScripts>() != null)
+        {
         triggeredName = other.GetComponent<InteractablesScripts>().GetName();
         Debug.Log(triggeredName);
+        }
     }
     
 
