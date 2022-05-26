@@ -65,11 +65,11 @@ public class PlayerMove : MonoBehaviour
 
     void FlipCat()
     {
-       // bool catHasHorizontalSpeed = Mathf.Abs(playerRB.velocity.x) > Mathf.Epsilon;
-       // if (catHasHorizontalSpeed)
-       // {
-        transform.localScale = new Vector3 (Mathf.Sign(playerRB.velocity.x), 1f);
-       // Debug.Log ("Sprite Flipped");
-       // }
+       //bool catHasHorizontalSpeed = Mathf.Abs(playerRB.velocity.x) > Mathf.Epsilon;
+       //if (catHasHorizontalSpeed)
+       //{
+       //transform.localScale = new Vector3 (Mathf.Sign(playerRB.velocity.x), 1f);
+       //Debug.Log ("Sprite Flipped");
+       //}
     }
 }
