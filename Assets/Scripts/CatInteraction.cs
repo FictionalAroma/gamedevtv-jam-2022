@@ -10,8 +10,8 @@ public class CatInteraction : MonoBehaviour
     {
         if(other.GetComponent<InteractablesScripts>() != null)
         {
-        triggeredName = other.GetComponent<InteractablesScripts>().GetName();
-        Debug.Log(triggeredName);
+            triggeredName = other.GetComponent<InteractablesScripts>().GetName();
+            Debug.Log(triggeredName);
         }
     }
     
