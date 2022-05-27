@@ -110,7 +110,7 @@ Material:
     - _TessMax: 25
     - _TessMin: 10
     - _TessValue: 16
-    - _Tile: 1.4
+    - _Tile: 10
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
