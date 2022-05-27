@@ -6,4 +6,14 @@ using UnityEngine;
 public class InteractiblesSO : ScriptableObject
 {
     public string interactableName;
+
+    public List<CatAction> catActions;
+}
+
+public enum CatAction
+{
+    Bab,
+    Eat,
+    Pickup,
+    Climb
 }

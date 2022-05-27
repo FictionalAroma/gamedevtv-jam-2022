@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 623609c6d28a992449cffbbfee7a1f09, type: 3}
-  m_Name: FoodBowl
+  m_Script: {fileID: 11500000, guid: 355b0882b05b48bf89c6a8a28b47a01d, type: 3}
+  m_Name: Data
   m_EditorClassIdentifier: 
-  interactableName: Food Bowl
-  catActions: 000000000100000002000000
+  musicTracks: []
+  lightColour: {r: 0, g: 0, b: 0, a: 0}
+  TimeName: 

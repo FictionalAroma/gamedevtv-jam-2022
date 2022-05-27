@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Nana
   m_EditorClassIdentifier: 
   interactableName: Nana
+  catActions: 01000000

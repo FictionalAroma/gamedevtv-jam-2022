@@ -17,4 +17,6 @@ public class InteractablesScripts : MonoBehaviour
         return(interactiblesSO.interactableName);
     }
 
+    
+
 }
