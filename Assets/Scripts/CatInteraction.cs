@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Global;
 using UnityEngine;
 
 public class CatInteraction : MonoBehaviour
@@ -12,6 +13,8 @@ public class CatInteraction : MonoBehaviour
         {
             triggeredName = other.GetComponent<InteractablesScripts>().GetName();
             Debug.Log(triggeredName);
+
+            CatFadingTextController.Instance.StartCatTalk(triggeredName);
         }
     }
     
