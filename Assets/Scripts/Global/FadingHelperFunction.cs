@@ -1,10 +1,11 @@
 ﻿using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Assets.Scripts.Global
 {
-    static class AudioHelperFunction
+    static class FadingHelperFunction
     {
         public delegate void CoroutineFinishedEvent();
 
@@ -26,5 +27,22 @@ namespace Assets.Scripts.Global
 
             yield break;
         }
+
+        public static IEnumerator StartFade(TextMeshProUGUI textSource, float duration, float targetAlpha, CoroutineFinishedEvent finishedEvent)
+        {
+            float currentTime = 0;
+            float start = textSource.alpha;
+            while (currentTime < duration)
+            {
+                currentTime += Time.deltaTime;
+                textSource.alpha = Mathf.Lerp(start, targetAlpha, currentTime / duration);
+                yield return null;
+            }
+
+            finishedEvent?.Invoke();
+
+            yield break;
+        }
+
     }
 }
