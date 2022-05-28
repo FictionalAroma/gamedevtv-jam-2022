@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 355b0882b05b48bf89c6a8a28b47a01d, type: 3}
+  m_Name: Nighttime
+  m_EditorClassIdentifier: 
+  musicTracks:
+  - {fileID: 8300000, guid: a636cb7860c11fb429e07baeff9bb064, type: 3}
+  - {fileID: 8300000, guid: 2754ffd3fcf075f4fb5fb51d68d7c2e1, type: 3}
+  playNewTrackImmediately: 1
+  lightColour: {r: 0, g: 0, b: 0, a: 0}
+  timeName: Nightime
+  timeLength: 60
+  timeOfDayIcon: {fileID: 0}

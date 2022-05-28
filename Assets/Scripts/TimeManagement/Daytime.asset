@@ -10,8 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 355b0882b05b48bf89c6a8a28b47a01d, type: 3}
-  m_Name: Data
+  m_Name: Daytime
   m_EditorClassIdentifier: 
-  musicTracks: []
+  musicTracks:
+  - {fileID: 8300000, guid: 0938c04bedaf2f64f9aa1b7aeb891491, type: 3}
+  - {fileID: 8300000, guid: 61c194ff99400d343b350843c965b8ae, type: 3}
+  playNewTrackImmediately: 1
   lightColour: {r: 0, g: 0, b: 0, a: 0}
-  TimeName: 
+  timeName: Daytime
+  timeLength: 15
+  timeOfDayIcon: {fileID: 0}

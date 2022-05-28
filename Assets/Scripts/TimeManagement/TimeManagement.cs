@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Assets.Scripts.Global;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -14,35 +15,54 @@ namespace Assets.Scripts.TimeManagement
         public Jukebox jukebox;
 
         private float _currentTimeSegmentTimer;
-        private int dayTimeIndex = 0;
+        private int _dayTimeIndex = 0;
         private TimeOfDayValues currentDayValues;
 
+        public TextMeshProUGUI timeOfDayText;
+        public TextMeshProUGUI debugText;
+
+        public void Start()
+        {
+            currentDayValues = daySegments[_dayTimeIndex];
+            
+            jukebox.SetTracks(currentDayValues.musicTracks, false, false);
+
+            jukebox.PlayNewTrackImmediate(currentDayValues.musicTracks.FirstOrDefault(), true);
+
+
+            timeOfDayText.text = currentDayValues.timeName;
+            _currentTimeSegmentTimer = 0;
+        }
 
         public void LateUpdate()
         {
             _currentTimeSegmentTimer += Time.deltaTime;
             if (_currentTimeSegmentTimer > currentDayValues.timeLength)
             {
-                dayTimeIndex++;
-                if (dayTimeIndex < daySegments.Count)
+                _dayTimeIndex++;
+                if (_dayTimeIndex >= daySegments.Count)
                 {
-                    dayTimeIndex = 0;
+                    _dayTimeIndex = 0;
                 }
 
-                currentDayValues = daySegments[dayTimeIndex];
+                currentDayValues = daySegments[_dayTimeIndex];
                 ActivateTimeChange(currentDayValues);
             }
+
+            debugText.text = _currentTimeSegmentTimer.ToString("000");
+
         }
 
 
-        private void ActivateTimeChange(TimeOfDayValues newDayValues)
+        private void ActivateTimeChange(TimeOfDayValues newDayValues, bool initialStart = false)
         {
             if (newDayValues.musicTracks.Any())
             {
                 jukebox.SetTracks(newDayValues.musicTracks, newDayValues.playNewTrackImmediately);
             }
-            //todo lucy do Light
-            // todo lucy do UI
+
+            timeOfDayText.text = newDayValues.timeName;
+            _currentTimeSegmentTimer = 0;
         }
     }
 }
