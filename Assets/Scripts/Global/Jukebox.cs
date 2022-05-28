@@ -9,38 +9,38 @@ namespace Assets.Scripts.Global
 {
     public class Jukebox : GlobalMusicPlayer
     {
-        private List<AudioClip> TrackList;
+        private readonly List<AudioClip> _trackList = new List<AudioClip>();
 
-        private int _trackIndex;
+        private int _trackIndex = -1;
 
-        public void SetTracks(IEnumerable<AudioClip> audioClips, bool playImmediate = false)
+
+
+        public void SetTracks(IEnumerable<AudioClip> audioClips, bool playImmediate = false, bool fade = true)
         {
-            TrackList.Clear();
-            TrackList.AddRange(audioClips);
+            _trackList.Clear();
+            _trackList.AddRange(audioClips);
             _trackIndex = 0;
             if (playImmediate)
             {
-                PlayNextTrack();
+                PlayNextTrack(fade);
             }
         }
 
-        public void PlayNextTrack()
+        public void PlayNextTrack(bool fade = true)
         {
-            if (_trackIndex >= TrackList.Count)
+            _trackIndex++;
+
+            if (_trackIndex >= _trackList.Count)
             {
                 _trackIndex = 0;
             }
-            else
-            {
-                _trackIndex++;
-            }
 
-            PlayNewAudio(TrackList[_trackIndex]);
+            PlayNewAudio(_trackList[_trackIndex], fade);
         }
 
         public void LateUpdate()
         {
-            if (currentClip.length - (defaultFadeSeconds*1.5f) > mainAudioSource.time)
+            if (currentClip.length + (defaultFadeSeconds * 1.5f) < mainAudioSource.time)
             {
                 PlayNextTrack();
             }
