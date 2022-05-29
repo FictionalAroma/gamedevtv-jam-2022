@@ -45,7 +45,7 @@ public class GlobalMusicPlayer : MonoBehaviour
             _nextTrackCrossfade = crossfade;
             _trackVolume = mainAudioSource.volume;
 
-            StartCoroutine(AudioHelperFunction.StartFade(mainAudioSource, fadeSeconds, 0f, FadeoutFinishedEvent));
+            StartCoroutine(FadingHelperFunction.StartFade(mainAudioSource, fadeSeconds, 0f, FadeoutFinishedEvent));
         }
         else
         {
@@ -56,7 +56,7 @@ public class GlobalMusicPlayer : MonoBehaviour
     private void FadeoutFinishedEvent()
     {
         PlayNewTrackImmediate(_nextClip);
-        StartCoroutine(AudioHelperFunction.StartFade(mainAudioSource, _nextTrackFadeSeconds, _trackVolume, null));
+        StartCoroutine(FadingHelperFunction.StartFade(mainAudioSource, _nextTrackFadeSeconds, _trackVolume, null));
     }
 
     public void PlayNewTrackImmediate(AudioClip clip, bool resetVolume = false)
