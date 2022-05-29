@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InteractablesScripts : MonoBehaviour
@@ -9,14 +7,18 @@ public class InteractablesScripts : MonoBehaviour
 
     void Start()
     {
-        objectName = interactiblesSO.interactableName;
+        if (interactiblesSO != null)
+            objectName = interactiblesSO.interactableName;
     }
 
     public string GetName()
     {
-        return(interactiblesSO.interactableName);
+        if (interactiblesSO != null)
+            return (interactiblesSO.interactableName);
+        else
+            return "";
     }
 
-    
+
 
 }
