@@ -6180,7 +6180,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6878,9 +6878,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b28b05d96813bb4bb5e537b013393b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: 
+  objectName: FoodBowl
   menuPositionOffest: {x: 0, y: 0, z: 0}
-  events: []
+  events:
+  - {fileID: 11400000, guid: 4afbadc557cba4f41840c2cc81f339d1, type: 2}
 --- !u!135 &1781055309
 SphereCollider:
   m_ObjectHideFlags: 0
