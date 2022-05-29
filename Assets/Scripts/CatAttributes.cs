@@ -12,6 +12,7 @@ namespace Assets.Scripts
 {
     public class CatAttributes : MonoBehaviour
     {
+        public const float HungerMax = 100f;
         
         public float HungerLevel = 100.0f;
 
@@ -31,6 +32,7 @@ namespace Assets.Scripts
 
         public TextMeshProUGUI HungerValueText;
         public TextMeshProUGUI ThirstValueText;
+        public object HeldObject { get; set; }
 
         public void Update()
         {
@@ -62,6 +64,23 @@ namespace Assets.Scripts
         {
             statToDecay -= (decayLossRate * Time.deltaTime);
             return statToDecay = Math.Max(0f, statToDecay);
+        }
+
+        public float GetFoodNumberToEat => HungerMax - HungerLevel;
+
+        public float EatFood(float foodAmount)
+        {
+            var maxEats = GetFoodNumberToEat;
+            var amountEats = 0f;
+            amountEats = maxEats < foodAmount
+                                    ? foodAmount
+                                    : foodAmount - maxEats;
+
+            foodAmount -= amountEats;
+            HungerLevel += amountEats;
+            CurrentHungerDelay = HungerDelay;
+
+            return foodAmount;
         }
 
     }

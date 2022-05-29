@@ -1,24 +1,46 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Assets.Scripts;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class InteractablesScripts : MonoBehaviour
 {
-    public InteractiblesSO interactiblesSO;
-    string objectName;
+    public string objectName;
+    public Vector3 menuPositionOffest;
+    public List<CatInteractionAction> events = new List<CatInteractionAction>();
 
-    void Start()
+    private Canvas newCanvas;
+    public void Start()
     {
-        if (interactiblesSO != null)
-            objectName = interactiblesSO.interactableName;
+        
     }
 
-    public string GetName()
+    public void DisplayInteractibleMenu(CatAttributes attributes)
     {
-        if (interactiblesSO != null)
-            return (interactiblesSO.interactableName);
-        else
-            return "";
+        var positionVector = new Vector2(-500, 100);
+        var canvas = InteractionMenuHandler.Instance.actionCanvas;
+        for (int index = 0; index < events.Count; index++ )
+        {
+            var action = events[index];
+            action.GenerateInteractionButton(canvas, InteractionMenuHandler.Instance.actionButtonPrefab, positionVector, attributes, index +1);
+            positionVector.x += 50f;
+        }
     }
 
+    public void CloseInteractableMenu()
+    {
+        foreach (var action in events)
+        {
+            action.KillButton();
+        }
+    }
 
+    public void OnClickTest()
+    {
+        Debug.Log("ClickerWorked");
+    }
 
 }
+
