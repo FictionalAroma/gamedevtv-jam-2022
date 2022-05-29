@@ -1,93 +1,77 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] float playerSpeed = 1f; // Player Movespeed Multiplier
-    
-    Rigidbody playerRB; //Bit of the player that's moved
-    private Animator catAnimator; //Telling the animator to do it's job
-    public GameObject character;
-    Vector3 lastPosition = Vector3.zero; // for tracking Cat Speed
-    float speed = 0f;
+    CharacterController characterController;
+    private Animator catAnimator;
     private SpriteRenderer sprite;
     private float timeBeforeCatSit = 0f;
-    private static readonly int IsWalking = Animator.StringToHash("IsWalking");
 
-    void Start() //Calling the components
+    public float walkSpeed = 5f;
+    public float sprintSpeed = 10f;
+    public float jumpStrength = 5f;
+    public float gravity = -5f;
+
+    float speed = 5f;
+    bool sprinting = false;
+    Vector2 velocity = Vector2.zero;
+    Vector2 currentVelocity = Vector2.zero;
+    float yVel = 0f;
+    float yVelCur = 0f;
+
+
+    void Start()
     {
+        characterController = GetComponent<CharacterController>();
         catAnimator = GetComponentInChildren<Animator>();
-        playerRB = GetComponent<Rigidbody>();
-
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
-    void Update () 
+    void OnMove(InputValue input)
     {
-        CatMove();
-	}
-
-    void CatMove()
-    {
-        lastPosition = transform.position;
-        bool movementKeyPressed = false;
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            movementKeyPressed = true;
-            transform.position += Vector3.right * playerSpeed * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            movementKeyPressed = true;
-
-            transform.position += Vector3.left* playerSpeed * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.UpArrow))
-        {
-            movementKeyPressed = true;
-
-            transform.position += Vector3.forward * playerSpeed * Time.deltaTime;
-		}
-		if (Input.GetKey(KeyCode.DownArrow))
-        {
-            movementKeyPressed = true;
-
-            transform.position += Vector3.back* playerSpeed * Time.deltaTime;
-		}
-
-        var movementVector = lastPosition - transform.position;
-        speed = movementVector.magnitude;
-        if (speed > float.Epsilon || movementKeyPressed)
-        {
-            timeBeforeCatSit = 0.05f;
-        }
-        else
-        {
-            timeBeforeCatSit -= Time.deltaTime;
-        }
-
-        catAnimator.SetBool(IsWalking, timeBeforeCatSit > 0f);
-
-        if (speed > float.Epsilon)
-        {
-            FlipCat(movementVector);
-        }
-
+        velocity = input.Get<Vector2>() * new Vector2(1f, 0.5f); // Stop it looking like the player moves extra fast dur to 45* angle
     }
 
-    //void FixedUpdate() 
-    //{
-    //    speed = (transform.position - lastPosition).magnitude;
-    //    lastPosition = transform.position;
+    void OnSprint(InputValue input)
+    {
+        sprinting = input.Get<float>() >= 1f;
+    }
 
-    //    catAnimator.SetBool("IsWalking", speed > float.Epsilon);
-    //}
+    void OnJump(InputValue input)
+    {
+        if (characterController.isGrounded)
+            yVel = jumpStrength;
+    }
+
+    void Update()
+    {
+        if (characterController.isGrounded)
+            currentVelocity = velocity;
+
+        if (currentVelocity.magnitude > float.Epsilon)
+            timeBeforeCatSit = 0.05f;
+        else
+            timeBeforeCatSit -= Time.deltaTime;
+
+        var yVector = Quaternion.Euler(0, 45f, 0) * new Vector3(0, yVel, 0);
+        yVel = Mathf.SmoothDamp(yVel, gravity, ref yVelCur, 0.5f);
+
+        if (sprinting)
+            speed = sprintSpeed;
+        else
+            speed = walkSpeed;
+
+        characterController.Move((new Vector3(currentVelocity.x, 0, currentVelocity.y) + yVector) * speed * Time.deltaTime);
+
+        catAnimator.SetBool("IsWalking", timeBeforeCatSit > 0f);
+        if (currentVelocity.magnitude > float.Epsilon)
+            FlipCat(currentVelocity);
+    }
 
     void FlipCat(Vector3 movementVector)
     {
-        
-            sprite.gameObject.transform.localScale = new Vector3(Mathf.Sign(movementVector.x), 1f);
-            //Debug.Log("Sprite Flipped");
+        sprite.gameObject.transform.localScale = new Vector3(-Mathf.Sign(movementVector.x), 1f);
     }
 }
