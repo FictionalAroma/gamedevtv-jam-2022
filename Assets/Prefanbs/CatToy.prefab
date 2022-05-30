@@ -97,9 +97,11 @@ GameObject:
   - component: {fileID: 8949563363261090064}
   - component: {fileID: 8949563363261090079}
   - component: {fileID: 8949563363261090078}
+  - component: {fileID: 2399433799353148620}
+  - component: {fileID: 6480525588150765277}
   m_Layer: 0
   m_Name: CatToy
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,8 +183,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7000279, y: 2.0000002, z: 0.19089603}
-  m_Center: {x: 0.14998631, y: 0.0000009535969, z: -0.11628342}
+  m_Size: {x: 0.42, y: 1.09, z: 0.19089603}
+  m_Center: {x: 0.03, y: 0.06, z: -0.03}
 --- !u!54 &8949563363261090078
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -199,3 +201,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &2399433799353148620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949563363261090068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8c90d3034043142b5c3ae65716bfcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &6480525588150765277
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949563363261090068}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.52, y: 1.92, z: 0.56}
+  m_Center: {x: 0.1, y: 0, z: -0.00000008940697}

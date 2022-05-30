@@ -14,7 +14,7 @@ public class PickupableItem : MonoBehaviour
     public void Pickup(Transform newParent, Vector3 position)
     {
         transform.SetParent(newParent, false);;
-        transform.localPosition = position;
+        transform.position = position;
 
         body.isKinematic = true;
         
