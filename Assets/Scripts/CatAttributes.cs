@@ -73,8 +73,8 @@ namespace Assets.Scripts
             var maxEats = GetFoodNumberToEat;
             var amountEats = 0f;
             amountEats = maxEats < foodAmount
-                                    ? foodAmount
-                                    : foodAmount - maxEats;
+                                    ? foodAmount - maxEats
+                                    : foodAmount;
 
             foodAmount -= amountEats;
             HungerLevel += amountEats;
