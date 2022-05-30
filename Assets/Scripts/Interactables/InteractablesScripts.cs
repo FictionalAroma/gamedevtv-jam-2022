@@ -14,7 +14,7 @@ public class InteractablesScripts : MonoBehaviour
 
     public void DisplayInteractibleMenu(CatAttributes attributes)
     {
-        var positionVector = InteractionMenuHandler.Instance.menuStartPosition;
+        var positionVector = InteractionMenuHandler.Instance.menuStartPosition.position;
         var canvas = InteractionMenuHandler.Instance.actionCanvas;
         for (int index = 0; index < events.Count; index++ )
         {

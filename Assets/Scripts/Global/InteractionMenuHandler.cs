@@ -9,7 +9,7 @@ public class InteractionMenuHandler : MonoBehaviour
     public Canvas actionCanvas;
     public GameObject actionButtonPrefab;
 
-    public Vector2 menuStartPosition;
+    public Transform menuStartPosition;
     private void Awake()
     {
         if (Instance == null)

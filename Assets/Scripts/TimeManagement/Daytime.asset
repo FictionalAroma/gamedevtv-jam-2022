@@ -18,5 +18,5 @@ MonoBehaviour:
   playNewTrackImmediately: 1
   lightColour: {r: 0, g: 0, b: 0, a: 0}
   timeName: Daytime
-  timeLength: 15
+  timeLength: 90
   timeOfDayIcon: {fileID: 0}
