@@ -37,6 +37,10 @@ public class CatInteraction : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-       currentInteractablesObject.CloseInteractableMenu();
+        var triggeredObject = other.GetComponent<InteractablesScripts>();
+        if (triggeredObject != null)
+        {
+            currentInteractablesObject.CloseInteractableMenu();
+        }
     }
 }

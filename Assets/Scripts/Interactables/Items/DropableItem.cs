@@ -20,6 +20,6 @@ public class DropableItem : ScriptableObject
     public GameObject DropItem(Transform source)
     {
         CurrentStacks--;
-        return Instantiate(objectPrefab, source.position, source.rotation);
+        return GameObject.Instantiate(objectPrefab, source.position, source.rotation);
     }
 }
