@@ -61,3 +61,6 @@ TagManager:
   - name: Nana 01
     uniqueID: 2402639621
     locked: 0
+  - name: Player
+    uniqueID: 2763771219
+    locked: 0
