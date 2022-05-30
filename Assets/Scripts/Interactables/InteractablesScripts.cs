@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class InteractablesScripts : MonoBehaviour
@@ -10,7 +7,6 @@ public class InteractablesScripts : MonoBehaviour
     public string objectName;
     public List<CatInteractionAction> events = new List<CatInteractionAction>();
 
-    private Canvas newCanvas;
     public void Start()
     {
         
@@ -34,11 +30,6 @@ public class InteractablesScripts : MonoBehaviour
         {
             action.KillButton();
         }
-    }
-
-    public void OnClickTest()
-    {
-        Debug.Log("ClickerWorked");
     }
 
 }

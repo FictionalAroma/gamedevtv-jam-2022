@@ -17,9 +17,9 @@ public class DropableItem : ScriptableObject
         CurrentStacks = numberOfStacks;
     }
 
-    public GameObject DropItem(Transform source)
+    public GameObject DropItem(Transform parent, Vector3 position)
     {
         CurrentStacks--;
-        return GameObject.Instantiate(objectPrefab, source.position, source.rotation);
+        return GameObject.Instantiate(objectPrefab, position, Quaternion.identity, parent);
     }
 }

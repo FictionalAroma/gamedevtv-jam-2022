@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Global;
+using UnityEngine;
 
 namespace Assets.Scripts.Interactables.CatActions
 {
@@ -10,11 +12,13 @@ namespace Assets.Scripts.Interactables.CatActions
 
         public bool destroyOnEmpty;
 
-        private readonly List<DropableItem> runTimeItems = new List<DropableItem>();
+        public Transform spawnPoint;
+
+        private readonly List<DropableItem> _runTimeItems = new();
 
         private void Awake()
         {
-            resultingItem.ForEach(item => runTimeItems.Add(UnityEngine.Object.Instantiate(item)));
+            resultingItem.ForEach(item => _runTimeItems.Add(UnityEngine.Object.Instantiate(item)));
         }
 
         public override void ActionSelected(CatAction action, CatAttributes attributes)
@@ -35,7 +39,7 @@ namespace Assets.Scripts.Interactables.CatActions
                 }
                 else
                 {
-                    var createdItem = item.DropItem(this.transform);
+                    var createdItem = item.DropItem(LevelLookup.Instance.transform, spawnPoint.position);
                 }
 
                 if (destroyOnEmpty && !AreAnyItemsLeft)
@@ -45,8 +49,8 @@ namespace Assets.Scripts.Interactables.CatActions
             }
         }
 
-        private bool AreAnyItemsLeft => runTimeItems.Any(ValidItemCheck);
-        private IEnumerable<DropableItem> GetItemsWithStacks => runTimeItems.Where(ValidItemCheck);
+        private bool AreAnyItemsLeft => _runTimeItems.Any(ValidItemCheck);
+        private IEnumerable<DropableItem> GetItemsWithStacks => _runTimeItems.Where(ValidItemCheck);
 
 
         private static readonly Func<DropableItem, bool> ValidItemCheck = item => item.CurrentStacks > 0;
