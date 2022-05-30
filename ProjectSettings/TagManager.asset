@@ -17,13 +17,13 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Nana 01
+  - Nana 02
+  - Nana 03
+  - Nana 04
+  - Nana 05
+  - Nana 06
+  - Nana 07
   - 
   - 
   - 
@@ -42,4 +42,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Nana 06
+    uniqueID: 4091031931
+    locked: 0
+  - name: Nana 05
+    uniqueID: 3497212095
+    locked: 0
+  - name: Nana 04
+    uniqueID: 1926688577
+    locked: 0
+  - name: Nana 03
+    uniqueID: 1582266155
+    locked: 0
+  - name: Nana 02
+    uniqueID: 2249700227
+    locked: 0
+  - name: Nana 01
+    uniqueID: 2402639621
     locked: 0
