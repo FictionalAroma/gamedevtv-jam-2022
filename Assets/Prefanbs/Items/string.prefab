@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8949563362027983960}
   - component: {fileID: 8949563362027983961}
-  - component: {fileID: 3561444690587909273}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -85,18 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3561444690587909273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8949563362027983963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e8c90d3034043142b5c3ae65716bfcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8949563363261090068
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +99,8 @@ GameObject:
   - component: {fileID: 8949563363261090078}
   - component: {fileID: 5613303615434926216}
   - component: {fileID: 1938132120356548018}
+  - component: {fileID: 4152558261735376088}
+  - component: {fileID: 3405123578740136008}
   m_Layer: 0
   m_Name: string
   m_TagString: Pickup
@@ -225,8 +214,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.69, y: 3.17, z: 1.59}
-  m_Center: {x: -0.06, y: 0, z: -0.21}
+  m_Size: {x: 2.71, y: 4.81, z: 2.34}
+  m_Center: {x: 0.01, y: 0, z: -0.21}
 --- !u!114 &1938132120356548018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,3 +228,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8c90d3034043142b5c3ae65716bfcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disablePhysics: 1
+  doBounce: 1
+  itemName: string
+  rotationSpeed: 20
+  bounceSpeed: 3
+--- !u!114 &4152558261735376088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949563363261090068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95049b6aa95d0d54b9baef224de05e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catAction: 0
+  interactionTarget: 0
+  buttonImage: {fileID: 21300000, guid: e9a79311b8af4be4a87d880d2a8019a8, type: 3}
+  ActionTextOverride: 
+  floorItem: {fileID: 1938132120356548018}
+--- !u!114 &3405123578740136008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949563363261090068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b28b05d96813bb4bb5e537b013393b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: String
+  events:
+  - {fileID: 4152558261735376088}

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8949563362027983960}
   - component: {fileID: 8949563362027983961}
+  - component: {fileID: 3561444690587909273}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0f03a24ff90ad834cbf6e823efd892ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: de7445ffb9da8644e9e9f499759e0b6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +85,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3561444690587909273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949563362027983963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8c90d3034043142b5c3ae65716bfcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disablePhysics: 1
+  doBounce: 1
+  itemName: 
+  rotationSpeed: 20
+  bounceSpeed: 3
 --- !u!1 &8949563363261090068
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,10 +117,8 @@ GameObject:
   - component: {fileID: 8949563363261090078}
   - component: {fileID: 5613303615434926216}
   - component: {fileID: 1938132120356548018}
-  - component: {fileID: 2348825737569267975}
-  - component: {fileID: 7734981554897272509}
   m_Layer: 0
-  m_Name: fabric
+  m_Name: catual
   m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,7 +230,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.81, y: 3.85, z: 1.4}
+  m_Size: {x: 1.69, y: 3.17, z: 1.59}
   m_Center: {x: -0.06, y: 0, z: -0.21}
 --- !u!114 &1938132120356548018
 MonoBehaviour:
@@ -230,38 +246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disablePhysics: 1
   doBounce: 1
-  itemName: fabric
+  itemName: catual
   rotationSpeed: 20
   bounceSpeed: 3
---- !u!114 &2348825737569267975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8949563363261090068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b28b05d96813bb4bb5e537b013393b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectName: fabric
-  events:
-  - {fileID: 7734981554897272509}
---- !u!114 &7734981554897272509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8949563363261090068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95049b6aa95d0d54b9baef224de05e51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  catAction: 0
-  interactionTarget: 0
-  buttonImage: {fileID: 21300000, guid: e9a79311b8af4be4a87d880d2a8019a8, type: 3}
-  ActionTextOverride: 
-  floorItem: {fileID: 1938132120356548018}

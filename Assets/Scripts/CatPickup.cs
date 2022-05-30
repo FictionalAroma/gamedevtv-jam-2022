@@ -8,7 +8,7 @@ public class CatPickup : MonoBehaviour
 {
     private PickupableItem lastTriggeredItem;
 
-    private PickupableItem pickedUpItem;
+    public PickupableItem pickedUpItem;
 
     public Transform ObjectDropPoint;
     public Transform ObjectCarryPoint;
@@ -17,7 +17,7 @@ public class CatPickup : MonoBehaviour
     {
         if (pickedUpItem != null)
         {
-            pickedUpItem.DropItem(transform.parent, gameObject.transform.position + Vector3.up);
+            pickedUpItem.DropItem(transform.parent, ObjectDropPoint.position);
             pickedUpItem = null;
         }
         else
