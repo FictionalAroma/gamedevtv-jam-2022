@@ -98,6 +98,8 @@ GameObject:
   - component: {fileID: 8949563363261090079}
   - component: {fileID: 8949563363261090078}
   - component: {fileID: 5613303615434926216}
+  - component: {fileID: 4598402723841244590}
+  - component: {fileID: 1938132120356548018}
   m_Layer: 0
   m_Name: fabric
   m_TagString: Pickup
@@ -213,3 +215,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.69, y: 3.17, z: 1.59}
   m_Center: {x: -0.06, y: 0, z: -0.21}
+--- !u!114 &4598402723841244590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949563363261090068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 36
+  eraseRenderer: 0
+--- !u!114 &1938132120356548018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949563363261090068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8c90d3034043142b5c3ae65716bfcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
