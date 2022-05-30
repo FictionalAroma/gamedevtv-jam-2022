@@ -8,7 +8,6 @@ using UnityEngine;
 public class InteractablesScripts : MonoBehaviour
 {
     public string objectName;
-    public Vector3 menuPositionOffest;
     public List<CatInteractionAction> events = new List<CatInteractionAction>();
 
     private Canvas newCanvas;
@@ -19,7 +18,7 @@ public class InteractablesScripts : MonoBehaviour
 
     public void DisplayInteractibleMenu(CatAttributes attributes)
     {
-        var positionVector = new Vector2(-500, 100);
+        var positionVector = InteractionMenuHandler.Instance.menuStartPosition;
         var canvas = InteractionMenuHandler.Instance.actionCanvas;
         for (int index = 0; index < events.Count; index++ )
         {
