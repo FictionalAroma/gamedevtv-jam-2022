@@ -64,3 +64,6 @@ TagManager:
   - name: Player
     uniqueID: 2763771219
     locked: 0
+  - name: Wearable
+    uniqueID: 437868921
+    locked: 0
