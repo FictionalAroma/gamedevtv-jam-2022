@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8057d8fd557caf40b9199d266d20b9a, type: 3}
-  m_Name: NanaFabric
+  m_Name: ShoerackShoes
   m_EditorClassIdentifier: 
-  objectPrefab: {fileID: 8949563363261090068, guid: b810cec1122386049aca67cc4a650a13,
+  objectPrefab: {fileID: 8949563363261090068, guid: 07d6ff82ffd770a458f61d00913de5bb,
     type: 3}
-  numberOfStacks: 10
+  numberOfStacks: 2

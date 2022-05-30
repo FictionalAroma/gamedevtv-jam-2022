@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8949563362027983960}
   - component: {fileID: 8949563362027983961}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: ItemSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0f03a24ff90ad834cbf6e823efd892ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5dfe919e5a6bee8449dfe669cfbc8331, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,9 +97,11 @@ GameObject:
   - component: {fileID: 8949563363261090064}
   - component: {fileID: 8949563363261090079}
   - component: {fileID: 8949563363261090078}
-  - component: {fileID: 5613303615434926216}
+  - component: {fileID: 7918251447595601975}
+  - component: {fileID: 1116621460808230048}
+  - component: {fileID: 12525001901145443}
   m_Layer: 0
-  m_Name: fabric
+  m_Name: Shoe
   m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 8949563363261090068}
   m_LocalRotation: {x: 0, y: 0, z: 0.7088385, w: 0.70537084}
   m_LocalPosition: {x: 5.56, y: 0.214, z: 6.76}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8949563362027983960}
@@ -182,8 +184,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.17, y: 2.66, z: 1.0000002}
-  m_Center: {x: -0.18, y: -0.26, z: -0.16}
+  m_Size: {x: 0.7000279, y: 2.0000002, z: 0.19089603}
+  m_Center: {x: 0.14998631, y: 0.0000009535969, z: -0.11628342}
 --- !u!54 &8949563363261090078
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -200,7 +202,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &5613303615434926216
+--- !u!65 &7918251447595601975
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,5 +213,37 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.69, y: 3.17, z: 1.59}
-  m_Center: {x: -0.06, y: 0, z: -0.21}
+  m_Size: {x: 1.66, y: 2.68, z: 1.64}
+  m_Center: {x: 0.00000005960466, y: -2.7755576e-17, z: -0.00000008940697}
+--- !u!114 &1116621460808230048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949563363261090068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b28b05d96813bb4bb5e537b013393b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: Shoe
+  events:
+  - {fileID: 12525001901145443}
+--- !u!114 &12525001901145443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8949563363261090068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c6579e4e39b7c4c9736583cdeb83fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catAction: 0
+  interactionTarget: 0
+  buttonImage: {fileID: 21300000, guid: 12fd04d9ac57e544ea657ef0b069d720, type: 3}
+  resultingItem: []
+  destroyOnEmpty: 0
