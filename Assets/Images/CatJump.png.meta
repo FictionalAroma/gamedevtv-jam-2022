@@ -143,10 +143,10 @@ TextureImporter:
       name: CatJump_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 2283
-        width: 371
-        height: 172
+        x: 33
+        y: 2238
+        width: 351
+        height: 143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e6225766bd902e498ce97f5852f1fa4
-      internalID: -67338317
+      spriteID: 23b716e1047c62846a5fb1bcaf03bfd2
+      internalID: 244419182
       vertices: []
       indices: 
       edges: []
@@ -164,10 +164,10 @@ TextureImporter:
       name: CatJump_1
       rect:
         serializedVersion: 2
-        x: 9
-        y: 2086
-        width: 361
-        height: 167
+        x: 33
+        y: 2040
+        width: 324
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 166f00b2b569ee540b234f25f9481916
-      internalID: -160207831
+      spriteID: d4229aceed0f48e499b51a1e56e4dc23
+      internalID: 1866192975
       vertices: []
       indices: 
       edges: []
@@ -185,10 +185,10 @@ TextureImporter:
       name: CatJump_2
       rect:
         serializedVersion: 2
-        x: 18
-        y: 1896
-        width: 359
-        height: 166
+        x: 33
+        y: 1836
+        width: 319
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,8 +196,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b122c5399c99f1498b992c2ba2dd435
-      internalID: -173935848
+      spriteID: 935bca7e8604cf740a59b7f5f1f48cef
+      internalID: -739815574
       vertices: []
       indices: 
       edges: []
@@ -206,10 +206,10 @@ TextureImporter:
       name: CatJump_3
       rect:
         serializedVersion: 2
-        x: 21
-        y: 1690
-        width: 339
-        height: 161
+        x: 32
+        y: 1639
+        width: 326
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1c8030a7a4ee0b43a47f63024021516
-      internalID: 1744934260
+      spriteID: 1ca765fe139fecc40a6a150ff80cf146
+      internalID: 1219671923
       vertices: []
       indices: 
       edges: []
@@ -227,10 +227,10 @@ TextureImporter:
       name: CatJump_4
       rect:
         serializedVersion: 2
-        x: 17
-        y: 1490
-        width: 335
-        height: 163
+        x: 31
+        y: 1440
+        width: 332
+        height: 141
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f23d8520e9fffa24cabf0d531fe073ad
-      internalID: 1544235392
+      spriteID: 80119baa65d167745b96f26e8e604221
+      internalID: -172971489
       vertices: []
       indices: 
       edges: []
@@ -248,114 +248,9 @@ TextureImporter:
       name: CatJump_5
       rect:
         serializedVersion: 2
-        x: 21
-        y: 1287
-        width: 355
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6eab3a9aa28d1714795ae6a5794126cf
-      internalID: -1005607472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatJump_6
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 1089
-        width: 357
-        height: 186
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df1597d2bee038a45857e12f01c22fa9
-      internalID: 206125011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatJump_7
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 889
-        width: 375
-        height: 176
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 711a21fdda9ff8b46a835db99a8dfdb7
-      internalID: -263778975
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatJump_8
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 692
-        width: 366
-        height: 147
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d658a924bdc710946bee77ede82b0778
-      internalID: -1234049310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatJump_9
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 494
-        width: 348
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79950815dc050ef438a398a811f8af95
-      internalID: -27524648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatJump_10
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 299
-        width: 329
+        x: 32
+        y: 1240
+        width: 334
         height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -364,8 +259,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6a3ff8449ad85d429185b831a60612e
-      internalID: 1163371593
+      spriteID: 7cd92c59a885b7d42941cb121208b8a5
+      internalID: -1417292766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJump_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1039
+        width: 331
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88bbbba073e39f548990c41baf020eea
+      internalID: 1679246773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJump_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 831
+        width: 362
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c53114929b3454982797fde179d79f
+      internalID: -1382178691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJump_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 630
+        width: 362
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e26fda6c5d4c4459c96cb062c57e05
+      internalID: 2075538943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJump_9
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 430
+        width: 367
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9f1c4cb25f0554491f272ab75aa2fa
+      internalID: -438097346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatJump_10
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 233
+        width: 362
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac22f2e9827e407449b37d6a31040339
+      internalID: 1403073645
       vertices: []
       indices: 
       edges: []
@@ -374,10 +374,10 @@ TextureImporter:
       name: CatJump_11
       rect:
         serializedVersion: 2
-        x: 16
-        y: 95
-        width: 353
-        height: 156
+        x: 35
+        y: 33
+        width: 358
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,8 +385,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5baabacfe455cbb48ae9a09a0591712e
-      internalID: -1408214321
+      spriteID: b67f1e8f59b597547a9cfcdbdbaa2ecf
+      internalID: -226254164
       vertices: []
       indices: 
       edges: []
@@ -394,7 +394,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3a060139499e87348a4af56af62df7c8
+    spriteID: 54b772aec85e7c742bf4bc8b84ff5b77
     internalID: 0
     vertices: []
     indices: 
@@ -402,18 +402,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CatJump_2: -173935848
-      CatJump_11: -1408214321
-      CatJump_4: 1544235392
-      CatJump_3: 1744934260
-      CatJump_10: 1163371593
-      CatJump_0: -67338317
-      CatJump_7: -263778975
-      CatJump_5: -1005607472
-      CatJump_6: 206125011
-      CatJump_9: -27524648
-      CatJump_1: -160207831
-      CatJump_8: -1234049310
+      CatJump_2: -739815574
+      CatJump_11: -226254164
+      CatJump_4: -172971489
+      CatJump_3: 1219671923
+      CatJump_10: 1403073645
+      CatJump_0: 244419182
+      CatJump_7: -1382178691
+      CatJump_5: -1417292766
+      CatJump_6: 1679246773
+      CatJump_9: -438097346
+      CatJump_1: 1866192975
+      CatJump_8: 2075538943
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

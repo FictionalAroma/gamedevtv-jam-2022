@@ -43,6 +43,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (characterController.isGrounded)
             yVel = jumpStrength;
+            catAnimator.SetTrigger("DoJump");
     }
 
     void Update()
