@@ -83,5 +83,14 @@ namespace Assets.Scripts
             return foodAmount;
         }
 
+        public bool HasSpaceInBag(DropableItem item)
+        {
+            return false;
+        }
+
+        public void PutInBag(DropableItem item)
+        {
+            
+        }
     }
 }

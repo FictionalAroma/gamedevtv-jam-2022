@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 
 
-public abstract class CatInteractionAction : ScriptableObject
+public abstract class CatInteractionAction : MonoBehaviour
 {
     public CatAction catAction;
     public InteractionType interactionTarget;

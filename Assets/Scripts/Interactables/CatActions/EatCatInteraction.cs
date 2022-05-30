@@ -4,15 +4,21 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Data", menuName = "ActionScripts/Eat", order = 1)]
 
 public class EatCatInteraction : CatInteractionAction
 {
     public float maxFoodValue;
-    public float currentFoodValue;
+    public float startingFoodValue;
+
+    private float currentFoodValue;
 
     public bool isContainer;
     public bool destroyOnEmpty;
+
+    public void Awake()
+    {
+        currentFoodValue = startingFoodValue;
+    }
 
     public override void ActionSelected(CatAction action, CatAttributes attributes)
     {
