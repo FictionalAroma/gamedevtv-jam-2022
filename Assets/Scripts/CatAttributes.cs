@@ -32,7 +32,7 @@ namespace Assets.Scripts
 
         public TextMeshProUGUI HungerValueText;
         public TextMeshProUGUI ThirstValueText;
-        public object HeldObject { get; set; }
+        public DropableItem HeldObject { get; set; }
 
         public void Update()
         {
@@ -88,9 +88,21 @@ namespace Assets.Scripts
             return false;
         }
 
+        public bool HasSpaceInBagPostCrafting(PickupableItem item)
+        {
+            return false;
+        }
+
+
         public void PutInBag(DropableItem item)
         {
             
         }
+
+        public void PutInBagPostCrafting(PickupableItem item)
+        {
+
+        }
+
     }
 }

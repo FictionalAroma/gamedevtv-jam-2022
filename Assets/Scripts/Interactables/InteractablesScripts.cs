@@ -19,8 +19,12 @@ public class InteractablesScripts : MonoBehaviour
         for (int index = 0; index < events.Count; index++ )
         {
             var action = events[index];
-            action.GenerateInteractionButton(canvas, InteractionMenuHandler.Instance.actionButtonPrefab, positionVector, attributes, index +1);
-            positionVector.x += 50f;
+            if (action.IsActionValid(attributes))
+            {
+                action.GenerateInteractionButton(canvas, InteractionMenuHandler.Instance.actionButtonPrefab,
+                    positionVector, attributes, index + 1);
+                positionVector.x += 50f;
+            }
         }
     }
 

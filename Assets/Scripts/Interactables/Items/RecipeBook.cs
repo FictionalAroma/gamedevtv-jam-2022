@@ -7,7 +7,12 @@ using UnityEngine;
 
 public class RecipeBook : MonoBehaviour
 {
+    public static RecipeBook Instance;
 
+    public void Awake()
+    {
+        Instance = this;
+    }
 
     public List<CraftingRecipe> RecipeList;
     public PickupableItem GetRecipeItem(string object1, string object2)
