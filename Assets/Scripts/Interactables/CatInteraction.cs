@@ -40,7 +40,7 @@ public class CatInteraction : MonoBehaviour
         var triggeredObject = other.GetComponent<InteractablesScripts>();
         if (triggeredObject != null)
         {
-            currentInteractablesObject.CloseInteractableMenu();
+            triggeredObject.CloseInteractableMenu();
         }
     }
 }

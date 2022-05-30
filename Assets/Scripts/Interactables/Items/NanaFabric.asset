@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 8949563363261090068, guid: b810cec1122386049aca67cc4a650a13,
     type: 3}
-  numberOfStacks: 10
+  numberOfStacks: 3

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShoeLeather
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 0}
-  numberOfStacks: 0
+  numberOfStacks: 1

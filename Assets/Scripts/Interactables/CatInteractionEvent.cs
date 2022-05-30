@@ -13,6 +13,7 @@ public abstract class CatInteractionAction : MonoBehaviour
     public Sprite buttonImage;
     private CatAttributes cachedAttributes;
     private GameObject actionButton;
+    public string ActionTextOverride;
 
     public virtual void GenerateInteractionButton(Canvas drawCanvas, GameObject buttonPrefab,Vector2 position, CatAttributes attributes,
         int index)
@@ -37,7 +38,7 @@ public abstract class CatInteractionAction : MonoBehaviour
         var textUI = actionButtonWrapper.actionNumberText;
         if (textUI != null)
         {
-            textUI.text = $"{index} - {catAction.ToString()}";
+            textUI.text = $"{index} - {(string.IsNullOrWhiteSpace(ActionTextOverride) ? catAction.ToString() : ActionTextOverride)}";
         }
     }
 
@@ -80,7 +81,7 @@ public enum CatAction
     Eat,
     Pickup,
     Climb,
-    Claw,
+    Ruin,
     Transfer,
 }
 public enum InteractionType
