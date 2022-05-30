@@ -42,6 +42,7 @@ namespace Assets.Scripts.Global
 
         public void StartCatTalk(string speechString, int numberOfSecondsDisplayed = 5)
         {
+            CatSpeechText.alpha = 1f;
             if (isSpeechActive)
             {
                 StopCoroutine(runningCoroutine);
@@ -58,10 +59,16 @@ namespace Assets.Scripts.Global
         {
             isSpeechActive = true;
             yield return new WaitForSeconds(delayTime + 1);
-            CatSpeechAnimator.SetBool(FadeOut, true);
             isSpeechActive = false;
 
         }
 
+        public void Update()
+        {
+            if (!isSpeechActive && CatSpeechText.alpha > 0f)
+            {
+                CatSpeechText.alpha -= Time.deltaTime;
+            }
+        }
     }
 }
