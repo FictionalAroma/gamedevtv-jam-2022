@@ -11,6 +11,10 @@ public class PickupableItem : MonoBehaviour
     public bool doBounce = true;
     private bool isPickedUp = false;
 
+    public string itemName;
+
+    public Dictionary<string, string> test;
+
     public float rotationSpeed = 20f;
     public float bounceSpeed = 3f;
 
