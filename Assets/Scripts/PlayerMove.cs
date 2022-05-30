@@ -51,22 +51,19 @@ public class PlayerMove : MonoBehaviour
             currentVelocity = velocity;
 
         if (currentVelocity.magnitude > float.Epsilon)
-            timeBeforeCatSit = 0.05f;
+            timeBeforeCatSit = 0.075f;
         else
             timeBeforeCatSit -= Time.deltaTime;
 
         var yVector = Quaternion.Euler(0, 45f, 0) * new Vector3(0, yVel, 0);
         yVel = Mathf.SmoothDamp(yVel, gravity, ref yVelCur, 0.5f);
 
-        if (sprinting)
-            speed = sprintSpeed;
-        else
-            speed = walkSpeed;
+        speed = sprinting ? sprintSpeed : walkSpeed;
 
         characterController.Move((new Vector3(currentVelocity.x, 0, currentVelocity.y) + yVector) * speed * Time.deltaTime);
 
         catAnimator.SetBool("IsWalking", timeBeforeCatSit > 0f);
-        if (currentVelocity.magnitude > float.Epsilon)
+        if (currentVelocity.magnitude > float.Epsilon && MathF.Abs(currentVelocity.x) > float.Epsilon)
             FlipCat(currentVelocity);
     }
 
