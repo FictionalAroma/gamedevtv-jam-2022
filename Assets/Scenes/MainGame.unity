@@ -8613,8 +8613,8 @@ MonoBehaviour:
   ThirstDelay: 60
   CurrentHungerDelay: 1
   CurrentThirstDelay: 1
-  HungerLossRate: 1
-  ThirstLossRate: 1
+  HungerLossRate: 0.05
+  ThirstLossRate: 0.01
   HungerValueText: {fileID: 990085523}
   ThirstValueText: {fileID: 1446600906}
 --- !u!114 &1916007827
