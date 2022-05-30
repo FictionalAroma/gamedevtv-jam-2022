@@ -12,9 +12,9 @@ public class CatInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var thisCollider = GetComponent<CharacterController>();
-        if (other.CompareTag(Tags.InteractablesTag))
-        {
+        //var thisCollider = GetComponent<CharacterController>();
+        //if (other.CompareTag(Tags.InteractablesTag))
+        //{
             var triggeredObject = other.GetComponent<InteractablesScripts>();
             if (triggeredObject != null)
             {
@@ -27,12 +27,12 @@ public class CatInteraction : MonoBehaviour
                 var attributes = GetComponent<CatAttributes>();
                 triggeredObject.DisplayInteractibleMenu(attributes);
             }
-        }
-        else if (other.CompareTag(Tags.PickupTag))
-        {
-            var test = thisCollider.
-            test.
-        }
+        //}
+        //else if (other.CompareTag(Tags.PickupTag))
+        //{
+        //    //var test = thisCollider.
+        //    //test.
+        //}
     }
 
     private void OnTriggerExit(Collider other)
