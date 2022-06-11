@@ -975,6 +975,7 @@ Transform:
   m_Children:
   - {fileID: 1626790908}
   - {fileID: 223004797}
+  - {fileID: 1123265767}
   m_Father: {fileID: 1916007817}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4113,7 +4114,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1916007817}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &908485756
 SpriteRenderer:
@@ -5199,12 +5200,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123265766}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.006, y: 0.128, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.49400043, y: 0.12799978, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1916007817}
+  m_Father: {fileID: 217869996}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1123265768
@@ -8768,7 +8769,6 @@ Transform:
   m_Children:
   - {fileID: 217869996}
   - {fileID: 814373287}
-  - {fileID: 1123265767}
   - {fileID: 1917274278}
   - {fileID: 908485755}
   m_Father: {fileID: 0}
@@ -8808,6 +8808,9 @@ MonoBehaviour:
   ThirstLossRate: 0.01
   HungerValueText: {fileID: 990085523}
   ThirstValueText: {fileID: 1446600906}
+  catualRenderer: {fileID: 1123265768}
+  prybaRenderer: {fileID: 0}
+  canOpenerRenderer: {fileID: 0}
 --- !u!114 &1916007827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8974,7 +8977,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1916007817}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1917274279
 SpriteRenderer:

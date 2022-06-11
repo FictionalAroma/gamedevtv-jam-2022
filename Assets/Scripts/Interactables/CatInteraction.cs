@@ -21,9 +21,7 @@ public class CatInteraction : MonoBehaviour
                 currentInteractablesObject = triggeredObject;
                 Debug.Log(triggeredObject.objectName);
 
-                StringBuilder stringBuilder = new StringBuilder(triggeredObject.objectName);
-                triggeredObject.events.ForEach(action => stringBuilder.AppendLine(action.catAction.ToString()));
-                CatFadingTextController.Instance.StartCatTalk(stringBuilder.ToString());
+                CatFadingTextController.Instance.StartCatTalk(triggeredObject.objectName);
                 var attributes = GetComponent<CatAttributes>();
                 triggeredObject.DisplayInteractibleMenu(attributes);
             }

@@ -34,6 +34,10 @@ namespace Assets.Scripts
         public TextMeshProUGUI ThirstValueText;
         public DropableItem HeldObject { get; set; }
 
+        public SpriteRenderer catualRenderer;
+        public SpriteRenderer prybaRenderer;
+        public SpriteRenderer canOpenerRenderer;
+
         public void Update()
         {
             if (CurrentHungerDelay > float.Epsilon)
@@ -90,7 +94,7 @@ namespace Assets.Scripts
 
         public bool HasSpaceInBagPostCrafting(PickupableItem item)
         {
-            return false;
+            return item.itemName == "catual";
         }
 
 
@@ -101,7 +105,14 @@ namespace Assets.Scripts
 
         public void PutInBagPostCrafting(PickupableItem item)
         {
-
+            switch (item.itemName)
+            {
+                case "catual":
+                {
+                    catualRenderer.enabled = true;
+                    break;
+                }
+            }
         }
 
     }
